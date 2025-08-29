@@ -197,17 +197,70 @@ section h2 {
 
 /* Why Section */
 .why {
-  padding: 60px 20px;
-  background: #7f8997;
+  background: #f9fafb;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.why.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.why h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.2rem;
 }
 
 .why p {
-  font-size: 1.1rem;
   display: flex;
-  justify-content: space-between;
-  max-width: 700px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  max-width: 600px;
   margin: 0 auto;
 }
+
+.why .feature {
+  background: #2563eb;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, background 0.2s ease, opacity 0.8s ease, transform 0.8s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Staggered features animation */
+.why.animate .feature:nth-child(1) { transition-delay: 0.2s; opacity:1; transform:translateY(0);}
+.why.animate .feature:nth-child(2) { transition-delay: 0.4s; opacity:1; transform:translateY(0);}
+.why.animate .feature:nth-child(3) { transition-delay: 0.6s; opacity:1; transform:translateY(0);}
+.why.animate .feature:nth-child(4) { transition-delay: 0.8s; opacity:1; transform:translateY(0);}
+
+.why .feature:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+  .why h2 {
+    font-size: 1.4rem;
+  }
+
+  .why .feature {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
 
 /* Contact Page Background & Layout */
 body.contact-page {
@@ -456,3 +509,4 @@ footer {
   .hero-content p { font-size: 0.9rem; }
   .cta-buttons a { font-size: 0.95rem; padding: 10px 15px; }
 }
+
