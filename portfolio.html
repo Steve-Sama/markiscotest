@@ -281,13 +281,20 @@
     <button class="cta-btn">Order Now</button>
   </div>
 </div>
-
-
-
-
   </section>
 
 <script src="portfolio.js"></script>
+
+  <script>
+  const buttons = document.querySelectorAll('.cta-btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      window.location.href = 'contact.html';
+    });
+  });
+</script>
+
   
 </body>
 </html>
+
