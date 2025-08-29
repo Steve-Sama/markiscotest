@@ -71,8 +71,27 @@
 </footer>
 
 <script src="main.js"></script>
+
+<script>
+  // Observe the 'why' section
+  const whySection = document.querySelector('.why');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        whySection.classList.add('animate');
+        observer.unobserve(whySection); // animate only once
+      }
+    });
+  }, { threshold: 0.2 }); // triggers when 20% of section is visible
+
+  observer.observe(whySection);
+</script>
+
+  
 </body>
 </html>
+
 
 
 
