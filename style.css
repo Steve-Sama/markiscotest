@@ -195,7 +195,6 @@ section h2 {
 
 .niche.see-more a:hover { color: #0052D4; }
 
-/* Why Section */
 .why {
   background: #f9fafb;
   padding: 3rem 1.5rem;
@@ -509,4 +508,5 @@ footer {
   .hero-content p { font-size: 0.9rem; }
   .cta-buttons a { font-size: 0.95rem; padding: 10px 15px; }
 }
+
 
